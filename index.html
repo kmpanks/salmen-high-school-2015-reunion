@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Salmen Class of 2015 Reunion</title>
+  <title>Salmen High Class of 2015 Reunion</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #f9f9f9;
       color: #1a1a1a;
       margin: 0;
     }
     header {
-      background-color: #000000;
+      background-color: black;
       color: gold;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
     }
     nav a {
       margin: 0 1rem;
@@ -21,26 +27,39 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav {
-      margin-top: 1rem;
-    }
     section {
       padding: 2rem;
-      background-color: #f5f5f5;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #bfa14f;
+    }
+    .button {
+      display: inline-block;
+      background-color: gold;
+      color: black;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 1.5rem;
     }
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome Back, Salmen Class of 2015!</h1>
-    <p>Your 10-Year Reunion Weekend Starts Soon!</p>
+    <img src="banner.png" alt="Salmen High Reunion Banner" class="banner">
     <nav>
       <a href="index.html">Home</a>
       <a href="events.html">Events</a>
@@ -49,8 +68,13 @@
   </header>
 
   <section>
-    <h2>Let’s Celebrate 10 Years!</h2>
-    <p>We’re excited to reunite, reminisce, and party like it’s 2015 again. 🎓</p>
+    <h1>🎉 Welcome Back, Spartans!</h1>
+    <p>We can't believe it's already been 10 years! Join us as we reconnect, reminisce, and celebrate the Salmen High Class of 2015. Whether you stayed close or moved far, this reunion is for all of us — to catch up, laugh hard, and make some new memories together.</p>
+
+    <h2>🗓️ What’s Happening?</h2>
+    <p>We’ve got an exciting weekend planned full of fun, food, and familiar faces! From a laid-back party to a family-friendly field day and a final farewell brunch, you won’t want to miss a thing.</p>
+
+    <a class="button" href="events.html">View Event Schedule</a>
   </section>
 
   <footer>
