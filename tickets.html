@@ -5,27 +5,37 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: white;
+      background-color: #f9f9f9;
       color: #1a1a1a;
       margin: 0;
     }
     header {
-      background-color: #000;
+      background-color: black;
       color: gold;
       text-align: center;
       padding: 2rem 1rem;
+      position: relative;
     }
     nav a {
       margin: 0 1rem;
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
     section {
       padding: 2rem;
-      background-color: #f5f5f5;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .ticket {
-      margin-bottom: 2rem;
+      border: 2px solid gold;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+      background-color: #fffce8;
     }
     .button {
       display: inline-block;
@@ -35,18 +45,35 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
+      margin-top: 1rem;
+    }
+    h2 {
+      color: #bfa14f;
     }
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 3rem;
+    }
+    .countdown {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: crimson;
+    }
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Buy Your Tickets</h1>
+    <img src="banner.jpg" alt="Salmen High Reunion Banner" class="banner">
+    <h1>🎟️ Reunion Tickets</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="events.html">Events</a>
@@ -55,21 +82,74 @@
   </header>
 
   <section>
+    <div class="countdown" id="countdown">🎉 T-shirt deadline: calculating...</div>
+
+    <p><strong>All attendees must purchase a ticket.</strong> Graduates should purchase the graduate ticket — which includes a special reunion t-shirt!</p>
+
     <div class="ticket">
       <h2>🎓 Graduate Ticket – $70</h2>
-      <p>Includes entry, food & drink, games, prizes, and a commemorative t-shirt.</p>
+      <ul>
+        <li>Entry to all reunion events</li>
+        <li>Food and drinks included</li>
+        <li>Games and prizes</li>
+        <li><strong>Commemorative Class T-shirt</strong></li>
+      </ul>
     </div>
 
     <div class="ticket">
-      <h2>👥 Non-Graduate +1 Ticket – $55</h2>
-      <p>Includes entry, food & drink, games, and prizes.</p>
+      <h2>👥 Non-Graduate Guest Ticket – $55</h2>
+      <ul>
+        <li>Entry to reunion events</li>
+        <li>Food and drinks included</li>
+        <li>Games and prizes</li>
+      </ul>
     </div>
 
-    <a class="button" href="https://paypal.me/SalmenClassof2015" target="_blank">Purchase via PayPal</a>
+    <h2>👕 T-shirt Details (Grads Only)</h2>
+    <p><strong>Color choices:</strong> Grey, Black, or White</p>
+    <p><strong>Size range:</strong> Adult Small – 3X</p>
+
+    <h2>💳 How to Pay</h2>
+    <p>Click below to purchase via PayPal. <strong>In the “What’s this for?” box</strong>, include:</p>
+    <ul>
+      <li>Your full name</li>
+      <li>T-shirt color</li>
+      <li>T-shirt size</li>
+    </ul>
+
+    <a class="button" href="https://paypal.me/SalmenClassof2015" target="_blank">Pay with PayPal</a>
+
+    <h2>⏰ Deadline to Get Your Shirt</h2>
+    <p><strong>Friday, May 16, 2025</strong> — tickets must be purchased by this date to receive a t-shirt at the event!</p>
+
+    <h2>❓ Questions?</h2>
+    <p>Contact <strong>Kierra Otis</strong> with any questions.</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Salmen High School Reunion Committee</p>
   </footer>
+
+  <script>
+    // Countdown Timer Script
+    const countdown = document.getElementById("countdown");
+    const deadline = new Date("May 16, 2025 23:59:59").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = deadline - now;
+      
+      if (distance < 0) {
+        countdown.innerText = "🛑 T-shirt deadline has passed.";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      countdown.innerText = `🎉 Only ${days} day(s) left to purchase your ticket and get a shirt!`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000 * 60 * 60); // Update hourly
+  </script>
 </body>
 </html>
