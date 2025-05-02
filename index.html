@@ -75,6 +75,34 @@
     <p>We’ve got an exciting weekend planned full of fun, food, and familiar faces! From a laid-back party to a family-friendly field day and a final farewell brunch, you won’t want to miss a thing.</p>
 
     <a class="button" href="events.html">View Event Schedule</a>
+    <hr style="margin-top: 3rem;">
+
+<h2 style="text-align: center; color: #bfa14f;">⏳ Countdown to Reunion Field Day</h2>
+<div id="countdown" style="font-size: 2rem; text-align: center; margin-top: 1rem; color: #333;"></div>
+
+<script>
+  function updateCountdown() {
+    const eventDate = new Date("July 12, 2025 12:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "🎉 It's Reunion Day!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `${days}d ${hrs}h ${mins}m ${secs}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
   </section>
 
   <footer>
