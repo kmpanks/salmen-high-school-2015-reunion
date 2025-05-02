@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reunion Events</title>
+  <title>Reunion Events - Salmen Class of 2015</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: white;
+      background-color: #f9f9f9;
       color: #1a1a1a;
       margin: 0;
     }
     header {
-      background-color: #000;
+      background-color: black;
       color: gold;
       text-align: center;
       padding: 2rem 1rem;
+      position: relative;
+    }
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
     }
     nav a {
       margin: 0 1rem;
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
     section {
       padding: 2rem;
-      background-color: #eeeeee;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
+    h1 {
+      color: #bfa14f;
       margin-bottom: 1rem;
+    }
+    .event {
+      margin-bottom: 2rem;
+    }
+    .event h2 {
+      margin-bottom: 0.25rem;
+      color: #333;
+    }
+    .event p {
+      margin: 0.25rem 0;
     }
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Reunion Weekend Events</h1>
+    <img src="banner.png" alt="Salmen High Reunion Banner" class="banner">
     <nav>
       <a href="index.html">Home</a>
       <a href="events.html">Events</a>
@@ -50,11 +69,29 @@
   </header>
 
   <section>
-    <ul>
-      <li><strong>🍻 Stock the Bar Party</strong> – Weekend of June 27<br>📍 Location TBA | 🕒 Exact Time TBA</li>
-      <li><strong>🏆 Reunion Field Day</strong> – July 12, 12:00 – 4:00 PM<br>📍 Fountainbleau State Park</li>
-      <li><strong>🍳 Brunch</strong> – July 13<br>📍 Location & Time TBA</li>
-    </ul>
+    <h1>🗓️ Reunion Weekend Schedule</h1>
+
+    <div class="event">
+      <h2>🍻 Stock the Bar Party</h2>
+      <p><strong>Date:</strong> Weekend of June 27 (Exact Date TBA)</p>
+      <p><strong>Location:</strong> TBA</p>
+      <p>This casual kick-off party will be a bring-your-own-favorites hangout! A great way to ease into the reunion vibe.</p>
+    </div>
+
+    <div class="event">
+      <h2>🏞️ Reunion Field Day</h2>
+      <p><strong>Date:</strong> Saturday, July 12</p>
+      <p><strong>Time:</strong> 12:00 PM – 4:00 PM</p>
+      <p><strong>Location:</strong> Fountainbleau State Park</p>
+      <p>Family-friendly fun with food, drinks, games, prizes, and plenty of space to catch up with old friends. Bring your picnic blankets!</p>
+    </div>
+
+    <div class="event">
+      <h2>🍳 Farewell Brunch</h2>
+      <p><strong>Date:</strong> Sunday, July 13</p>
+      <p><strong>Time & Location:</strong> TBA</p>
+      <p>Before we part ways, join us for a relaxing brunch to share stories, exchange numbers, and say our goodbyes. Final details coming soon.</p>
+    </div>
   </section>
 
   <footer>
